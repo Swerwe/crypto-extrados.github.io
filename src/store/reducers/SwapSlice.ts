@@ -1,5 +1,6 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { ISwap } from "../../models/ISwap";
+import { fetchSwap } from "./ActionCreators";
 interface SwapState {
     swap?: ISwap;
     isLoading: boolean;
@@ -26,9 +27,23 @@ export const swapSlice = createSlice({
         swapFetchingError(state, action: PayloadAction<string>){
             state.isLoading = false;
             state.error = action.payload;
-
         }
 
-    }
+    },
+    extraReducers: (builder) => {
+        builder.addCase(fetchSwap.pending.type, (state:SwapState) => {
+            state.isLoading = true;
+        });
+        builder.addCase(fetchSwap.fulfilled.type, (state:SwapState,action:PayloadAction<ISwap>) => {
+            state.isLoading = false;
+            state.error = '';
+            state.swap = action.payload;
+        });
+        builder.addCase(fetchSwap.rejected.type, (state:SwapState,action:PayloadAction<string>) => {
+            state.isLoading = false;
+            state.error = action.payload;
+        });
+
+      },
 });
 export default swapSlice.reducer;
