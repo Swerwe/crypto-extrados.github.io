@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
 import { useAppDispatch, useAppSelector } from './hooks/redux';
 import { fetchSwap } from './store/reducers/ActionCreators';
+import { Overview } from './pages/Overview/Overview';
 
 function App() {
   const dispatch = useAppDispatch();
@@ -10,11 +12,12 @@ function App() {
     dispatch(fetchSwap())
   },[])
   return (
-    <div className="App">
-      {isLoading && <h1>Loading...</h1>}
-      {error && <h1>Ошибка {error}</h1>}
-      {JSON.stringify(swap)}
-    </div>
+    <BrowserRouter>
+      <Routes>
+      <Route path="/" element={<Navigate to="/overview" />} />
+        <Route path="overview" element={<Overview/>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
