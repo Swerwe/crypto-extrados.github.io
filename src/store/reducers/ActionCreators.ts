@@ -14,10 +14,22 @@ export const fetchSwap = createAsyncThunk(
     }
 );
 export const fetchSales = createAsyncThunk(
-    'swap/fetch',
+    'sales/fetch',
     async (_, thunkAPI) => {
         try{
             const response = await axios.get<IStatistics>('https://my-json-server.typicode.com/Swerwe/FakeDB/sales-statistic');
+            return response.data;
+        }catch(e){
+            return thunkAPI.rejectWithValue("Sales loading error...");
+        }
+
+    }
+);
+export const fetchOffers = createAsyncThunk(
+    'offers/fetch',
+    async (_, thunkAPI) => {
+        try{
+            const response = await axios.get<IStatistics>('https://my-json-server.typicode.com/Swerwe/FakeDB/exchange-offer');
             return response.data;
         }catch(e){
             return thunkAPI.rejectWithValue("Sales loading error...");

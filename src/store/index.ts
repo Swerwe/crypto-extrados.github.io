@@ -1,9 +1,11 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
 import swapReducer from "./reducers/SwapSlice";
 import salesReducer from "./reducers/SalesSlice";
+import offersReducer from "./reducers/OffersSlice";
 const rootReducer = combineReducers({
     swapReducer,
     salesReducer,
+    offersReducer,
 });
 export const setupStore = () => {
     return configureStore({
