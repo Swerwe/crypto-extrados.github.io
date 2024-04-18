@@ -1,0 +1,32 @@
+.SwapTo{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-body{
+        width: 385px;
+        display: flex;
+        &__currency, &__amount{
+            display: flex;
+            flex-direction: column;
+        }
+        &__currency{
+            min-width: 100px;
+        }
+        &__amount{
+            margin-left: 200px;
+        }
+        &__token-name, &__token-receive, &__balance, &__token-usd{
+            color:#767484;
+            font-size: 16px;
+        }
+        &__full-name, &__token-amount{
+            font-size: 20px;
+
+        }
+        &__token-usd{
+            display: flex;
+            gap:3px;
+        }
+    }
+}

@@ -1,5 +1,8 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable no-undef */
 'use strict';
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');

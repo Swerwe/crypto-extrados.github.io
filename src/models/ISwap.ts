@@ -1,8 +1,8 @@
 export interface ISwap {
-    from:SwapFrom;
-    to:SwapTo;
+    from:SwapFromType;
+    to:SwapToType;
 }
-type SwapFrom = {
+export type SwapFromType = {
     tokenName: string,
     svg: string,
     fullName: string,
@@ -10,6 +10,6 @@ type SwapFrom = {
     amount: number,
     usd:number,
 }
-type SwapTo = SwapFrom & {
+export type SwapToType = SwapFromType & {
     revenuePercent: number
 }

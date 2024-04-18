@@ -1,0 +1,26 @@
+.SwapBody{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .change-icon__absolute{
+        position: absolute;
+        top:69px;
+        left: 237px;
+    }
+    .swap-btn{
+        position: absolute;
+        top:175px;
+        left: 55px;
+        cursor: pointer;
+        width: 400px;
+        height: 30px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        background-color: #414051;
+        color: #fff;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 17px;
+    }
+}

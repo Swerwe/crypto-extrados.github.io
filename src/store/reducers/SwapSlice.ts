@@ -1,7 +1,7 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { ISwap } from "../../models/ISwap";
 import { fetchSwap } from "./ActionCreators";
-interface SwapState {
+export interface SwapState {
     swap?: ISwap;
     isLoading: boolean;
     error: string;
