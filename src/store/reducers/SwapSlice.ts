@@ -15,20 +15,6 @@ export const swapSlice = createSlice({
     name: 'swap',
     initialState,
     reducers: {
-        swapFetching(state) {
-            state.isLoading = true;
-
-        },
-        swapFetchingSuccess(state, action: PayloadAction<ISwap>){
-            state.isLoading = false;
-            state.error = '';
-            state.swap = action.payload;
-        },
-        swapFetchingError(state, action: PayloadAction<string>){
-            state.isLoading = false;
-            state.error = action.payload;
-        }
-
     },
     extraReducers: (builder) => {
         builder.addCase(fetchSwap.pending.type, (state:SwapState) => {
