@@ -3,6 +3,7 @@ import './BalanceChart.scss';
 import {Chart as ChartJS, PointElement, LineElement} from 'chart.js';
 import type { ChartData } from 'chart.js';
 ChartJS.register(PointElement,LineElement);
+import { formatDate } from '../../helpers/formatDate';
 import { GradientBgPlugin } from './GradientBgPlugin';
 import { Line } from 'react-chartjs-2';
 import { DateStatistic } from '../../models/DateStatistic';
@@ -98,16 +99,16 @@ const data:DateStatistic[] = [
     {"date": "2024-04-07", "value": 9},
     {"date": "2024-04-08", "value": 12},
 ];
-const dates = data.map(item => item.date);
+const dates = data.map(item => formatDate(item.date));
 const values = data.map(item => item.value);
 const chartData:ChartData<'line'> = {
     labels: dates,
     datasets: [
         {
-            label: "Sales: $",
-            borderColor:"red",
+            label: "$",
+            borderColor:"#fff",
             data: values,
-            borderWidth: 3,
+            borderWidth: 1,
             pointRadius:0
         }
     ]
@@ -121,8 +122,11 @@ export const BalanceChart: React.FC = () => {
                 data={chartData}
                 plugins={[GradientBgPlugin]}
                 options={{
-                    
-                    
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
                     responsive: true,
                     interaction: {
                         
@@ -135,6 +139,7 @@ export const BalanceChart: React.FC = () => {
                             }
                         },
                         y: {
+                            display: false,
                             grid: {
                             display: false
                             },

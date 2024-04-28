@@ -4,15 +4,11 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend, CategoryScale, LinearSca
 ChartJS.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement);
 import { Bar } from 'react-chartjs-2';
 import { DateStatistic } from '../../models/DateStatistic';
+import { formatDate } from '../../helpers/formatDate';
 interface IStatisticsChartProps {
     color: string;
     statistics: DateStatistic[];
 }
-const formatDate = (inputDate: string) => {
-    const [year, month, day] = inputDate.split("-");
-    return `${+day} ${["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][+month - 1]}`;
-};
-
 
 export const StatisticsChart: React.FC<IStatisticsChartProps> = ({ statistics, color = "red" }) => {
     const dates: string[] = statistics.map(item => formatDate(item.date));
@@ -52,7 +48,7 @@ export const StatisticsChart: React.FC<IStatisticsChartProps> = ({ statistics, c
                         },
                         y: {
                             display: false,
-                                                        grid:{
+                                grid:{
                                 display:false
                             }
                         }
