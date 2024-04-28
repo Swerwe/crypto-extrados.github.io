@@ -6,9 +6,9 @@ import { StatisticsChart } from '../StatisticsChart/StatisticsChart';
 import { RevenuePercent } from '../Swap/SwapBody/SwapTo/RevenuePercent/RevenuePercent';
 //import { IStatistics } from '../../models/IStatistics';
 
-export const SalesChart: React.FC = (props) => {
+export const SalesChart: React.FC = () => {
   const dispatch = useAppDispatch();
-  const {sales, isLoading, error} = useAppSelector(state => state.salesReducer);
+  const {sales} = useAppSelector(state => state.salesReducer);
   React.useEffect(() => {
     dispatch(fetchSales());
   },[dispatch]);

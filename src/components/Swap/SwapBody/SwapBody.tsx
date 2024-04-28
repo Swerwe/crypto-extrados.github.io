@@ -7,7 +7,7 @@ import { ChangeIcon } from './ChangeIcon/ChangeIcon';
 
 
 
-export const SwapBody: React.FC<SwapState> = ({swap, isLoading, error}) => {
+export const SwapBody: React.FC<SwapState> = ({swap}) => {
     return (
       <div className="SwapBody">
         <SwapFrom from={swap?.from} />
