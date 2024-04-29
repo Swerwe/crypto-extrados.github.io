@@ -6,8 +6,9 @@ import { columns } from './columns';
 import './TokensModule.scss';
 interface ITokensModuleProps {
     className?:string;
+    size?: 'small' | 'middle' | 'large';
 }
-export function TokensModule({className}:ITokensModuleProps) {
+export function TokensModule({className,size='small'}:ITokensModuleProps) {
     const dispatch = useAppDispatch();
     const {tokens} = useAppSelector((state) => state.tokensReducer);
     React.useEffect(()=>{
@@ -30,7 +31,7 @@ export function TokensModule({className}:ITokensModuleProps) {
                     colorPrimary:"#757575",
                 }
             }}>
-                <Table columns={columns} dataSource={tokens} size='small' />
+                <Table columns={columns} dataSource={tokens} size={size} />
             </ConfigProvider>
 
         </div>

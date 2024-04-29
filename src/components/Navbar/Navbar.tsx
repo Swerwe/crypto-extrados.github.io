@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { HomeOutlined, UserOutlined } from '@ant-design/icons';
 import { ConfigProvider, Menu } from 'antd';
 import { Link } from 'react-router-dom';
 
@@ -20,11 +19,11 @@ export function Navbar() {
                     },
                 }}
             >
-                <Menu style={{width:"90vw", marginLeft:"70px", marginTop:"20px"}} theme='dark' mode="horizontal">
-                    <Menu.Item className='navbar-item' key="home" icon={<HomeOutlined />}>
+                <Menu className='navbar-menu' style={{width:"90vw", marginLeft:"70px", marginTop:"20px", display:"flex",gap:"5px"}} theme='dark' mode="horizontal">
+                    <Menu.Item className='navbar-item' key="home">
                         <Link to="/overview">Overview</Link>
                     </Menu.Item>
-                    <Menu.Item className='navbar-item' key="profile" icon={<UserOutlined />}>
+                    <Menu.Item className='navbar-item' key="profile">
                         <Link to="/tokens">Tokens</Link>
                     </Menu.Item>
                 </Menu>

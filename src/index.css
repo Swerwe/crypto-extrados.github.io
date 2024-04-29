@@ -4,6 +4,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(#171333,#0b091c, #090718);
+  
+}
+html{
+  background: linear-gradient(#171333,#0b091c, #090718);
+  height: 100vh;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
