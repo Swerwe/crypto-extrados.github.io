@@ -9,7 +9,7 @@ module.exports = {
       'plugin:react-hooks/recommended',
     ],
     rules: {
-        semi: [1, "always"],
+        semi: ["warn", "always"],
         "@typescript-eslint/no-unused-vars": "warn",
         "import/no-unused-modules": "warn"
     },
