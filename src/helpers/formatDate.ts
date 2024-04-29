@@ -1,4 +1,9 @@
-export const formatDate = (inputDate: string) => {
-    const [, month, day] = inputDate.split("-");
-    return `${+day} ${["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][+month - 1]}`;
+import moment from 'moment';
+
+export const formatDate = (inputDate: string):string => {
+    const date = moment(inputDate, 'YYYY-MM-DD');
+    if (!date.isValid()) {
+        throw new Error('Invalid date format');
+    }
+    return date.format('D MMM');
 };
