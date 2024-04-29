@@ -6,101 +6,10 @@ ChartJS.register(PointElement,LineElement);
 import { formatDate } from '../../helpers/formatDate';
 import { GradientBgPlugin } from './GradientBgPlugin';
 import { Line } from 'react-chartjs-2';
-import { DateStatistic } from '../../models/DateStatistic';
-const data:DateStatistic[] = [
-    {"date": "2024-04-01", "value": 10},
-    {"date": "2024-04-02", "value": 11},
-    {"date": "2024-04-03", "value": 12},
-    {"date": "2024-04-04", "value": 13},
-    {"date": "2024-04-05", "value": 14},
-    {"date": "2024-04-06", "value": 10},
-    {"date": "2024-04-07", "value": 9},
-    {"date": "2024-04-08", "value": 12},
-    {"date": "2024-04-01", "value": 10},
-    {"date": "2024-04-02", "value": 11},
-    {"date": "2024-04-03", "value": 12},
-    {"date": "2024-04-04", "value": 13},
-    {"date": "2024-04-05", "value": 14},
-    {"date": "2024-04-06", "value": 10},
-    {"date": "2024-04-07", "value": 9},
-    {"date": "2024-04-08", "value": 12},
-    {"date": "2024-04-01", "value": 10},
-    {"date": "2024-04-02", "value": 11},
-    {"date": "2024-04-03", "value": 12},
-    {"date": "2024-04-04", "value": 13},
-    {"date": "2024-04-05", "value": 14},
-    {"date": "2024-04-06", "value": 10},
-    {"date": "2024-04-07", "value": 9},
-    {"date": "2024-04-08", "value": 12},
-    {"date": "2024-04-01", "value": 10},
-    {"date": "2024-04-02", "value": 11},
-    {"date": "2024-04-03", "value": 12},
-    {"date": "2024-04-04", "value": 13},
-    {"date": "2024-04-05", "value": 14},
-    {"date": "2024-04-06", "value": 10},
-    {"date": "2024-04-07", "value": 9},
-    {"date": "2024-04-08", "value": 12},
-    {"date": "2024-04-01", "value": 10},
-    {"date": "2024-04-02", "value": 11},
-    {"date": "2024-04-03", "value": 22},
-    {"date": "2024-04-04", "value": 23},
-    {"date": "2024-04-05", "value": 24},
-    {"date": "2024-04-06", "value": 20},
-    {"date": "2024-04-07", "value": 29},
-    {"date": "2024-04-08", "value": 22},
-    {"date": "2024-04-07", "value": 20},
-    {"date": "2024-04-08", "value": 22},
-    {"date": "2024-04-08", "value": 19},
-    {"date": "2024-04-04", "value": 13},
-    {"date": "2024-04-05", "value": 14},
-    {"date": "2024-04-06", "value": 10},
-    {"date": "2024-04-07", "value": 9},
-    {"date": "2024-04-08", "value": 12},
-    {"date": "2024-04-01", "value": 10},
-    {"date": "2024-04-02", "value": 11},
-    {"date": "2024-04-03", "value": 12},
-    {"date": "2024-04-04", "value": 13},
-    {"date": "2024-04-05", "value": 14},
-    {"date": "2024-04-06", "value": 10},
-    {"date": "2024-04-07", "value": 9},
-    {"date": "2024-04-08", "value": 12},
-    {"date": "2024-04-08", "value": 12},
-    {"date": "2024-04-01", "value": 10},
-    {"date": "2024-04-02", "value": 11},
-    {"date": "2024-04-03", "value": 12},
-    {"date": "2024-04-04", "value": 13},
-    {"date": "2024-04-05", "value": 14},
-    {"date": "2024-04-06", "value": 10},
-    {"date": "2024-04-07", "value": 9},
-    {"date": "2024-04-08", "value": 12},
-    {"date": "2024-04-01", "value": 10},
-    {"date": "2024-04-02", "value": 11},
-    {"date": "2024-04-03", "value": 12},
-    {"date": "2024-04-04", "value": 13},
-    {"date": "2024-04-05", "value": 14},
-    {"date": "2024-04-06", "value": 10},
-    {"date": "2024-04-07", "value": 9},
-    {"date": "2024-04-08", "value": 12},
-    {"date": "2024-04-08", "value": 12},
-    {"date": "2024-04-01", "value": 10},
-    {"date": "2024-04-02", "value": 11},
-    {"date": "2024-04-03", "value": 12},
-    {"date": "2024-04-04", "value": 13},
-    {"date": "2024-04-05", "value": 14},
-    {"date": "2024-04-06", "value": 10},
-    {"date": "2024-04-07", "value": 9},
-    {"date": "2024-04-08", "value": 12},
-    {"date": "2024-04-01", "value": 10},
-    {"date": "2024-04-02", "value": 11},
-    {"date": "2024-04-03", "value": 12},
-    {"date": "2024-04-04", "value": 13},
-    {"date": "2024-04-05", "value": 14},
-    {"date": "2024-04-06", "value": 10},
-    {"date": "2024-04-07", "value": 9},
-    {"date": "2024-04-08", "value": 12},
-];
-const dates = data.map(item => formatDate(item.date));
-const values = data.map(item => item.value);
+import { ballanceData } from './data/balanceData';
+
+const dates = ballanceData.map(item => formatDate(item.date));
+const values = ballanceData.map(item => item.value);
 const chartData:ChartData<'line'> = {
     labels: dates,
     datasets: [
@@ -109,7 +18,7 @@ const chartData:ChartData<'line'> = {
             borderColor:"#fff",
             data: values,
             borderWidth: 1,
-            pointRadius:0
+            pointRadius:0,
         }
     ]
 };
@@ -118,13 +27,21 @@ export const BalanceChart: React.FC = () => {
       <div className="BalanceChart">
         <div className='graph'>
             <Line 
-
                 data={chartData}
                 plugins={[GradientBgPlugin]}
                 options={{
+
                     plugins: {
                         legend: {
                             display: false
+                        }
+                    },
+                    layout:{
+                        padding:{
+                            top:20,
+                            left:10,
+                            bottom:8,
+                            right: 8
                         }
                     },
                     responsive: true,
@@ -136,15 +53,20 @@ export const BalanceChart: React.FC = () => {
                         x: {
                             grid: {
                             display: false
-                            }
+                            },
+                            ticks:{
+                                color:"#adaeae",
+                            },
                         },
                         y: {
-                            display: false,
+                            ticks:{
+                                color:"#adaeae",
+                            },
                             grid: {
-                            display: false
+                                display: false
                             },
                             suggestedMin: 5,
-                            suggestedMax: 20
+                            suggestedMax: 35,
                         }
                     },
                 }}
