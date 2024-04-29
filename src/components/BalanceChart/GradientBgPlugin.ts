@@ -4,7 +4,6 @@ export const GradientBgPlugin = {
     beforeDraw: function (chart: Chart) {
         const ctx = chart.ctx;
         const canvas = chart.canvas;
-        const chartArea = chart.chartArea;
         if (canvas === null) return; 
         const context = canvas.getContext("2d");
         if (context === null) return;

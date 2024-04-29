@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { useAppSelector, useAppDispatch } from '../../hooks/redux';
 import { fetchTokens } from '../../store/reducers/ActionCreators';
-import { Space, Table, ConfigProvider } from 'antd';
-import { IToken } from '../../models/IToken';
+import { Table, ConfigProvider } from 'antd';
 import { columns } from './columns';
 import './TokensModule.scss';
 interface ITokensModuleProps {
