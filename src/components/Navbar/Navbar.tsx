@@ -21,10 +21,10 @@ export function Navbar() {
             >
                 <Menu className='navbar-menu' style={{width:"90vw", marginLeft:"70px", marginTop:"20px", display:"flex",gap:"5px"}} theme='dark' mode="horizontal">
                     <Menu.Item className='navbar-item' key="home">
-                        <Link to="/crypto-extrados.github.io/overview">Overview</Link>
+                        <Link to="/overview">Overview</Link>
                     </Menu.Item>
                     <Menu.Item className='navbar-item' key="profile">
-                        <Link to="/crypto-extrados.github.io/tokens">Tokens</Link>
+                        <Link to="/tokens">Tokens</Link>
                     </Menu.Item>
                 </Menu>
             </ConfigProvider>
