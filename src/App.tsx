@@ -12,10 +12,10 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-      <Route path="/" element={<Navigate to="/overview" />} />
-        <Route path="overview" element={<Overview/>} />
-        <Route path="/" element={<Navigate to="/overview" />} />
-        <Route path="/tokens" element={<Tokens/>} />
+      <Route path="/crypto-extrados.github.io/" element={<Navigate to="/crypto-extrados.github.io/overview" />} />
+        <Route path="/crypto-extrados.github.io/overview" element={<Overview/>} />
+        <Route path="/crypto-extrados.github.io/" element={<Navigate to="/crypto-extrados.github.io//overview" />} />
+        <Route path="/crypto-extrados.github.io/tokens" element={<Tokens/>} />
       </Routes>
     </BrowserRouter>
 
