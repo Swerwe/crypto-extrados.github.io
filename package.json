@@ -2,7 +2,7 @@
   "name": "crypto-extrados",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://swerwe.github.io/crypto-extrados.github.io",
+  "homepage": ".",
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
@@ -81,7 +81,8 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "jest",
-    "lint": "eslint . --ext .tsx,.ts"
+    "lint": "eslint . --ext .tsx,.ts",
+    "deploy": "npm run build&&gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
