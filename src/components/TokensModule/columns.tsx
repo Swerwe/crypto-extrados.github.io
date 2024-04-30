@@ -24,17 +24,18 @@ export const columns: TableProps<DataType>['columns'] = [
         dataIndex:"balance",
         key:"balance",
     },
+
     {
         title:"Market Cap",
         dataIndex:"marketCap",
         key:"marketCap",
-        render: (marketCap) => <a>${marketCap}</a>
+        render: (marketCap) => <a>${marketCap.toLocaleString().replace(/\s/g, ',')}</a>
     },
     {
         title:"Volume (24H)",
         dataIndex:"volume",
         key:"volume",
-        render: (volume) => <a>${volume}</a>
+        render: (volume) => <a>${volume.toLocaleString().replace(/\s/g, ',')}</a>
     },
     {
         title:"CIRC Supply",

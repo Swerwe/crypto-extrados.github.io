@@ -249,7 +249,19 @@ module.exports = function (webpackEnv) {
       level: 'none',
     },
     optimization: {
+      usedExports:true,
       minimize: isEnvProduction,
+      splitChunks:{
+        cacheGroups:{
+          vendor:{
+            name:'vendors',
+            chunks: "all",
+            test: /node_modules/,
+            enforce: true
+            
+          }
+        }
+      },
       minimizer: [
         // This is only used in production mode
         new TerserPlugin({
