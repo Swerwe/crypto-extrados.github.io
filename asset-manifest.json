@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/crypto-extrados.github.io/static/css/main.b1714450.css",
-    "main.js": "/crypto-extrados.github.io/static/js/main.1104ad38.js",
+    "main.js": "/crypto-extrados.github.io/static/js/main.b8f5a45e.js",
     "vendors.js": "/crypto-extrados.github.io/static/js/vendors.6decde3e.js",
     "static/media/NeueMontreal-Bold.otf": "/crypto-extrados.github.io/static/media/NeueMontreal-Bold.0836656dccdad13f5c96.otf",
     "static/media/NeueMontreal-Light.otf": "/crypto-extrados.github.io/static/media/NeueMontreal-Light.b94da60cc7760663345c.otf",
     "static/media/NeueMontreal-Regular.otf": "/crypto-extrados.github.io/static/media/NeueMontreal-Regular.140bfb4a71fe08805d92.otf",
     "index.html": "/crypto-extrados.github.io/index.html",
     "main.b1714450.css.map": "/crypto-extrados.github.io/static/css/main.b1714450.css.map",
-    "main.1104ad38.js.map": "/crypto-extrados.github.io/static/js/main.1104ad38.js.map",
+    "main.b8f5a45e.js.map": "/crypto-extrados.github.io/static/js/main.b8f5a45e.js.map",
     "vendors.6decde3e.js.map": "/crypto-extrados.github.io/static/js/vendors.6decde3e.js.map"
   },
   "entrypoints": [
     "static/js/vendors.6decde3e.js",
     "static/css/main.b1714450.css",
-    "static/js/main.1104ad38.js"
+    "static/js/main.b8f5a45e.js"
   ]
 }
